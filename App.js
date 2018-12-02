@@ -122,6 +122,9 @@ const myApp = createDrawerNavigator(
                 </TouchableOpacity>
               </View>
             </View>
+            <Text>
+              {store.getState().name} {" "}{store.getState().lname}
+            </Text>
 
             <View style={{ flex: 3 }}>
               <DrawerItems {...props} />
@@ -185,5 +188,6 @@ function reducer(state = initState, action) {
 }
 
 const store = createStore(reducer);
+console.log(store.getState());
 
 export default App;

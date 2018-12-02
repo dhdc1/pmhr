@@ -100,10 +100,6 @@ class LabScreen extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    globalState: state
-  };
-}
+mapStateToProps = state => ({ globalState: state });
 
 export default connect(mapStateToProps)(LabScreen);
