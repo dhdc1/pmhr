@@ -1,0 +1,23 @@
+{
+  "name": "pmhr",
+  "version": "0.0.0",
+  "description": "No description",
+  "author": null,
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "dependencies": {
+    "@expo/vector-icons": "8.0.0",
+    "expo": "^31.0.0",
+    "expo-asset": "~1.1.1",
+    "expo-constants": "~1.1.0",
+    "expo-file-system": "~1.1.0",
+    "expo-font": "^1.0.0",
+    "native-base": "2.8.1",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "react-native-paper": "2.1.3",
+    "react-navigation": "3.0.2",
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1"
+  }
+}
