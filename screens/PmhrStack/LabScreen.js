@@ -33,12 +33,13 @@ class LabScreen extends React.Component {
                 style={{
                   flex: 1,
                   flexDirection: "row",
-                  justifyContent: "space-around"
+                  justifyContent: "space-between"
                 }}
               >
                 <Text>LAB</Text>
                 <Text>ค่ามาตรฐาน</Text>
                 <Text>ผลตรวจ</Text>
+                <Text>วดป.</Text>
               </View>
             </ListItem>
             <ListItem>
@@ -46,12 +47,13 @@ class LabScreen extends React.Component {
                 style={{
                   flex: 1,
                   flexDirection: "row",
-                  justifyContent: "space-around"
+                  justifyContent: "space-between"
                 }}
               >
                 <Text>BUN</Text>
                 <Text>20</Text>
                 <Text>10</Text>
+                <Text>30/11/61</Text>
               </View>
             </ListItem>
             <ListItem>
@@ -59,12 +61,13 @@ class LabScreen extends React.Component {
                 style={{
                   flex: 1,
                   flexDirection: "row",
-                  justifyContent: "space-around"
+                  justifyContent: "space-between"
                 }}
               >
                 <Text>Cho</Text>
                 <Text>20</Text>
                 <Text>10</Text>
+                <Text>05/10/61</Text>
               </View>
             </ListItem>
             <ListItem>
@@ -72,12 +75,13 @@ class LabScreen extends React.Component {
                 style={{
                   flex: 1,
                   flexDirection: "row",
-                  justifyContent: "space-around"
+                  justifyContent: "space-between"
                 }}
               >
                 <Text>Cr</Text>
                 <Text>20</Text>
                 <Text>10</Text>
+                <Text>30/11/61</Text>
               </View>
             </ListItem>
             <ListItem>
@@ -85,12 +89,125 @@ class LabScreen extends React.Component {
                 style={{
                   flex: 1,
                   flexDirection: "row",
-                  justifyContent: "space-around"
+                  justifyContent: "space-between"
                 }}
               >
                 <Text>HbA1c</Text>
                 <Text>{"<=7"}</Text>
                 <Text>{"5.6"}</Text>
+                <Text>21/11/61</Text>
+              </View>
+            </ListItem>
+            <ListItem>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: "row",
+                  justifyContent: "space-between"
+                }}
+              >
+                <Text>HbA1c</Text>
+                <Text>{"<=7"}</Text>
+                <Text>{"5.6"}</Text>
+                <Text>21/11/61</Text>
+              </View>
+            </ListItem>
+            <ListItem>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: "row",
+                  justifyContent: "space-between"
+                }}
+              >
+                <Text>HbA1c</Text>
+                <Text>{"<=7"}</Text>
+                <Text>{"5.6"}</Text>
+                <Text>21/11/61</Text>
+              </View>
+            </ListItem>
+            <ListItem>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: "row",
+                  justifyContent: "space-between"
+                }}
+              >
+                <Text>HbA1c</Text>
+                <Text>{"<=7"}</Text>
+                <Text>{"5.6"}</Text>
+                <Text>21/11/61</Text>
+              </View>
+            </ListItem>
+            <ListItem>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: "row",
+                  justifyContent: "space-between"
+                }}
+              >
+                <Text>HbA1c</Text>
+                <Text>{"<=7"}</Text>
+                <Text>{"5.6"}</Text>
+                <Text>21/11/61</Text>
+              </View>
+            </ListItem>
+            <ListItem>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: "row",
+                  justifyContent: "space-between"
+                }}
+              >
+                <Text>HbA1c</Text>
+                <Text>{"<=7"}</Text>
+                <Text>{"5.6"}</Text>
+                <Text>21/11/61</Text>
+              </View>
+            </ListItem>
+            <ListItem>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: "row",
+                  justifyContent: "space-between"
+                }}
+              >
+                <Text>HbA1c</Text>
+                <Text>{"<=7"}</Text>
+                <Text>{"5.6"}</Text>
+                <Text>21/11/61</Text>
+              </View>
+            </ListItem>
+            <ListItem>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: "row",
+                  justifyContent: "space-between"
+                }}
+              >
+                <Text>HbA1c</Text>
+                <Text>{"<=7"}</Text>
+                <Text>{"5.6"}</Text>
+                <Text>21/11/61</Text>
+              </View>
+            </ListItem>
+            <ListItem>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: "row",
+                  justifyContent: "space-between"
+                }}
+              >
+                <Text>HbA1c</Text>
+                <Text>{"<=7"}</Text>
+                <Text>{"5.6"}</Text>
+                <Text>21/11/61</Text>
               </View>
             </ListItem>
           </List>
