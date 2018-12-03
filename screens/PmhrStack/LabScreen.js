@@ -102,5 +102,7 @@ class LabScreen extends React.Component {
 
 const mapStateToProps = state => ({ globalState: state });
 const mapDispatchToProps = dispatch => ({ dispatch });
-
-export default connect(mapStateToProps,mapDispatchToProps)(LabScreen);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LabScreen);
