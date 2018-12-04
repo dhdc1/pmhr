@@ -13,203 +13,65 @@ import {
   Right
 } from "native-base";
 import {} from "expo";
+import axios from "axios";
 
 import { connect } from "react-redux";
+//import { FETCH_LAB } from "../../actions/Actions";
 
 class LabScreen extends React.Component {
+  state = {
+    cid: "1421200056153",
+    lab: []
+  };
+  async componentDidMount() {
+    //this.props.dispatch(FETCH_LAB("1421200056153"));
+    let resp = await axios.post("http://61.19.22.99:3002/lab", {
+      cid: this.state.cid
+    });
+    this.setState({ lab: resp.data.lab });
+    console.log(resp.data.lab);
+  }
   render() {
+    //console.log(this.props.globalState.lab.lab[0])
     return (
       <Container>
+        <View style={{backgroundColor: "gray" }}>
+          <ListItem itemDivider>
+            <Text style={{ fontWeight: "bold" }}>({this.state.cid})</Text>
+          </ListItem>
+          <ListItem itemDivider>
+            <View
+              style={{
+                flex: 1,
+                flexDirection: "row",
+                justifyContent: "space-between"
+              }}
+            >
+              <Text>LAB</Text>
+              <Text>ค่ามาตรฐาน</Text>
+              <Text>ผลตรวจ</Text>
+              <Text>วดป.</Text>
+            </View>
+          </ListItem>
+        </View>
         <Content>
           <List>
-            <ListItem itemDivider>
-              <Text>
-                ({this.props.globalState.cid}) {this.props.globalState.name}{" "}
-                {this.props.globalState.lname}
-              </Text>
-            </ListItem>
-            <ListItem itemDivider>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>LAB</Text>
-                <Text>ค่ามาตรฐาน</Text>
-                <Text>ผลตรวจ</Text>
-                <Text>วดป.</Text>
-              </View>
-            </ListItem>
-            <ListItem>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>BUN</Text>
-                <Text>20</Text>
-                <Text>10</Text>
-                <Text>30/11/61</Text>
-              </View>
-            </ListItem>
-            <ListItem>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>Cho</Text>
-                <Text>20</Text>
-                <Text>10</Text>
-                <Text>05/10/61</Text>
-              </View>
-            </ListItem>
-            <ListItem>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>Cr</Text>
-                <Text>20</Text>
-                <Text>10</Text>
-                <Text>30/11/61</Text>
-              </View>
-            </ListItem>
-            <ListItem>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>HbA1c</Text>
-                <Text>{"<=7"}</Text>
-                <Text>{"5.6"}</Text>
-                <Text>21/11/61</Text>
-              </View>
-            </ListItem>
-            <ListItem>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>HbA1c</Text>
-                <Text>{"<=7"}</Text>
-                <Text>{"5.6"}</Text>
-                <Text>21/11/61</Text>
-              </View>
-            </ListItem>
-            <ListItem>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>HbA1c</Text>
-                <Text>{"<=7"}</Text>
-                <Text>{"5.6"}</Text>
-                <Text>21/11/61</Text>
-              </View>
-            </ListItem>
-            <ListItem>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>HbA1c</Text>
-                <Text>{"<=7"}</Text>
-                <Text>{"5.6"}</Text>
-                <Text>21/11/61</Text>
-              </View>
-            </ListItem>
-            <ListItem>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>HbA1c</Text>
-                <Text>{"<=7"}</Text>
-                <Text>{"5.6"}</Text>
-                <Text>21/11/61</Text>
-              </View>
-            </ListItem>
-            <ListItem>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>HbA1c</Text>
-                <Text>{"<=7"}</Text>
-                <Text>{"5.6"}</Text>
-                <Text>21/11/61</Text>
-              </View>
-            </ListItem>
-            <ListItem>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>HbA1c</Text>
-                <Text>{"<=7"}</Text>
-                <Text>{"5.6"}</Text>
-                <Text>21/11/61</Text>
-              </View>
-            </ListItem>
-            <ListItem>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>HbA1c</Text>
-                <Text>{"<=7"}</Text>
-                <Text>{"5.6"}</Text>
-                <Text>21/11/61</Text>
-              </View>
-            </ListItem>
-            <ListItem>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: "row",
-                  justifyContent: "space-between"
-                }}
-              >
-                <Text>HbA1c</Text>
-                <Text>{"<=7"}</Text>
-                <Text>{"5.6"}</Text>
-                <Text>21/11/61</Text>
-              </View>
-            </ListItem>
+            {this.state.lab.map((data, index) => (
+              <ListItem key={index}>
+                <View
+                  style={{
+                    flex: 1,
+                    flexDirection: "row",
+                    justifyContent: "space-between"
+                  }}
+                >
+                  <Text>{data.labname}</Text>
+                  <Text>{data.basevalue}</Text>
+                  <Text>{data.labresult}</Text>
+                  <Text>{data.labdate}</Text>
+                </View>
+              </ListItem>
+            ))}
           </List>
         </Content>
       </Container>

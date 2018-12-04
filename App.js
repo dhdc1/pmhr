@@ -26,7 +26,7 @@ import Home from "./screens/HomeStack";
 import Setting from "./screens/SettingStack";
 import Pmhr from "./screens/PmhrStack";
 
-import { createStore } from "redux";
+import { store } from "./stores";
 import { Provider } from "react-redux";
 
 const myApp = createDrawerNavigator(
@@ -123,7 +123,7 @@ const myApp = createDrawerNavigator(
               </View>
             </View>
             <Text>
-              {store.getState().name} {" "}{store.getState().lname}
+              {store.getState().name} {store.getState().lname}
             </Text>
 
             <View style={{ flex: 3 }}>
@@ -176,18 +176,5 @@ class App extends React.Component {
     );
   }
 }
-
-const initState = { cid: 3650100810887, name: "อุเทน", lname: "จาดยางโทน" };
-function reducer(state = initState, action) {
-  switch (action.type) {
-    case "add":
-      return action.playload;
-    default:
-      return state;
-  }
-}
-
-const store = createStore(reducer);
-console.log(store.getState());
 
 export default App;
