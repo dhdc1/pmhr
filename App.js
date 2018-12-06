@@ -10,6 +10,7 @@ import {
 } from "react-native";
 
 //import { Container, Content } from 'native-base';
+import { Avatar } from "react-native-elements";
 
 import {
   createAppContainer,
@@ -97,16 +98,32 @@ const myApp = createDrawerNavigator(
                 flex: 1,
                 flexDirection: "row",
                 backgroundColor: "teal",
-                padding: 5
+                padding:8
               }}
             >
+              {/* 
               <Image
                 source={{
                   uri:
                     "http://www.domalberto.edu.br/wp-content/uploads/2017/02/joao.png"
                 }}
                 style={{ width: 150, height: 150 }}
+                onPress={() => alert("Avatar")}
               />
+
+              */}
+              <Avatar
+                size="xlarge"
+                rounded
+                ImageComponent ={true}
+                source={{
+                  uri:
+                    "https://www.khaosod.co.th/wp-content/uploads/2018/07/thumb_67015_default_news_size_5.jpeg"
+                }}
+                onPress={() => alert("Works!")}
+                activeOpacity={0.7}
+              />
+
               <View style={{ flex: 1, alignItems: "flex-end" }}>
                 <TouchableOpacity
                   onPress={() => {

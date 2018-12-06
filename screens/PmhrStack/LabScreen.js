@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import {
   Container,
   Header,
@@ -12,7 +12,7 @@ import {
   Body,
   Right
 } from "native-base";
-import {} from "expo";
+import { AppLoading } from "expo";
 import axios from "axios";
 
 import { connect } from "react-redux";
@@ -20,11 +20,9 @@ import { connect } from "react-redux";
 
 class LabScreen extends React.Component {
   state = {
-    cid: "1421200056153",
-    lab: []
+    cid: this.props.globalState.lab.cid
   };
   async componentDidMount() {
-    //this.props.dispatch(FETCH_LAB("1421200056153"));
     let resp = await axios.post("http://61.19.22.99:3002/lab", {
       cid: this.state.cid
     });
@@ -35,10 +33,8 @@ class LabScreen extends React.Component {
     //console.log(this.props.globalState.lab.lab[0])
     return (
       <Container>
-        <View style={{backgroundColor: "gray" }}>
-          <ListItem itemDivider>
-            <Text style={{ fontWeight: "bold" }}>({this.state.cid})</Text>
-          </ListItem>
+        <View style={{ backgroundColor: "gray" }}>
+         
           <ListItem itemDivider>
             <View
               style={{
@@ -54,25 +50,30 @@ class LabScreen extends React.Component {
             </View>
           </ListItem>
         </View>
+
         <Content>
-          <List>
-            {this.state.lab.map((data, index) => (
-              <ListItem key={index}>
-                <View
-                  style={{
-                    flex: 1,
-                    flexDirection: "row",
-                    justifyContent: "space-between"
-                  }}
-                >
-                  <Text>{data.labname}</Text>
-                  <Text>{data.basevalue}</Text>
-                  <Text>{data.labresult}</Text>
-                  <Text>{data.labdate}</Text>
-                </View>
-              </ListItem>
-            ))}
-          </List>
+          {!this.state.lab ? (
+            <ActivityIndicator />
+          ) : (
+            <List>
+              {this.state.lab.map((data, index) => (
+                <ListItem key={index}>
+                  <View
+                    style={{
+                      flex: 1,
+                      flexDirection: "row",
+                      justifyContent: "space-around"
+                    }}
+                  >
+                    <Text style={{fontSize:12}}>{data.labname}</Text>
+                    <Text style={{fontSize:12}}>{data.basevalue}</Text>
+                    <Text style={{fontSize:12}}>{data.labresult}</Text>
+                    <Text style={{fontSize:12}}>{data.labdate}</Text>
+                  </View>
+                </ListItem>
+              ))}
+            </List>
+          )}
         </Content>
       </Container>
     );
